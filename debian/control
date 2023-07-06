@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: java-sip-api
+Section: java
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Ingo Bauersachs <ingo@jitsi.org>
+Build-Depends: debhelper-compat (= 13),
+ default-jdk,
+ libmaven-bundle-plugin-java,
+ maven-debian-helper (>= 2.0)
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/java-team/java-sip-api.git
+Vcs-Browser: https://salsa.debian.org/java-team/java-sip-api
+Homepage: https://github.com/opentelecoms-org/java-sip-api
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libsip-api-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: SIP API for Java
+ The SIP API specification provides a standard portable
+ interface to share information between SIP Clients and
+ SIP Servers, providing call control elements enabling
+ converged-network applications.
+ .
+ This is a reimplementation of the JSR 32 specification
+ due to a non-free license of the reference implementation.
+

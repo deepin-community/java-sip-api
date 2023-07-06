@@ -1,5 +1,17 @@
-template-repository (1.0-1) unstable; urgency=medium
+java-sip-api (1.2-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Update Standards-Version to 4.5.1
+  * Use debhelper-compat.
+    - Update compat level to 13.
+  * Update Vcs to salsa.
+  * Add Rules-Requires-Root: no.
+  * Use https with copyright-format-uri.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Fri, 01 Jan 2021 17:35:23 +0000
+
+java-sip-api (1.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #846881)
+
+ -- Ingo Bauersachs <ingo@jitsi.org>  Sat, 03 Dec 2016 22:44:43 +0100
